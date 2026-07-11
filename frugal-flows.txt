@@ -1,0 +1,123 @@
+arXiv:2411.01295 = "Marginal Causal Flows for Validation and Inference"
+-----------------------------------------------------------------------
+
+Notes:
+======
+
+Term - P(Y|T)
+|------------------------------>
+ The ordinary conditional distribution, the population filtered down to the cases where T took a specific calue and sees what Y looks like in that subpop.
+
+ T may have not been assigned to a random pop due to various reasons including a self assigned trial, this confounding can unknowningly mask the real cause of the observed outcome.
+  - if the T="takes a specific vitamin", and Y is "Overall Health Outcome". The corelation between people that take supplements that are overall health concious individuals is high, so the results of the study may appear to indicate a larger treatment effect than it otherwise would be.
+
+Term - P(Y|do(T))
+|------------------------------>
+ What would Y look like if we FORCED T to take a certain value uniformly across the pop. i.e. what would the treatment effect look like if we mandated that everyone take the vitamin supplement.
+
+ do(T=t) means that you take the causal graph and cut all arrows pointing into T and set T=t by flat. Then you ask what distribution Y has under this modified system.
+
+
+Term - Diffeomorphic Transformation
+|------------------------------>
+ Mapping between spaces that is:
+   - Bijective (on to one and onto)
+   - Smooth (infinitely differentiable), both the transformation and its inverse have no kinks, jumps or tears.
+   - its inverse is also smooth - the inverse map is also smooth
+   - T-1(T(x)) = x - it is has an inverse.
+
+Term - Cumulative Distribution Function
+|------------------------------>
+ "What is the probability that my random varaible is <= some value x?"
+
+ Formal Notation= FY(x) = P(Y <= x)
+                  -----------------
+ FY(-inf)=0 - nothing is below -inf
+ FY(inf)=1 - everythin is below inf
+ FY(x) - non decreasing - as x grows you only gain more probability.
+
+ 6-sided die
+ FY(1) = P(Y<=1) = 1/6
+ FY(3) = P(Y<=3) = 3/6 = 0.5
+ FY(6) = P(Y<-6) = 6/6 = 1.0
+
+Term - "Chain Rule of Probability"
+|------------------------------>
+
+Term - MOD "Marginal Outcome Distribution"
+|------------------------------>
+
+Term - "Law of Total Probablilty"
+|------------------------------>
+
+Term - "Targeted Maximum Likelihood Estimation"
+|------------------------------>
+
+Term - Propensity Scoring
+|------------------------------>
+
+Term - "Sklars Therom"
+|------------------------------>
+
+Term - "Copulae"
+|------------------------------>
+
+Term - "Sensitivity Analysis"
+|------------------------------>
+
+Term - "Auxiliary Analysis"
+|------------------------------>
+
+Term - "Subgroup Analysis"
+|------------------------------>
+
+Term - "Placebo Tests"
+|------------------------------>
+
+Term - "Negative Controls"
+|------------------------------>
+
+=======
+Quotes:
+=======
+
+"For example, when validating an inference method which
+estimates an ATE under certain confounding assumptions, it is crucial that generated data follow the
+“ground truth” ATE and confounding assumptions one wishes to measure. However, synthetic data
+risk being oversimplified and contrived, failing to reflect the complexity of real world datasets"
+
+"To mitigate this, generative models are trained on real-world data and calibrated to generate samples
+with modifiable causal constraints. Such constraints include the average causal treatment effect,
+unobserved confounding, and positivity. To our knowledge, the FF framework proposed in this paper
+is the first method to allow all of these conditions to adjusted by the user. Existing methods (Neal
+et al., 2020; Athey et al., 2021; Parikh et al., 2022) encode these effects through soft optimisation
+constraints, hence there is no guarantee that the constraints are satisfied. Enforcing these constraints
+too strongly may negatively impact model optimisation, and may affect the reconstructive ability
+of the underlying model. Furthermore, since these approaches do not explicitly parameterise the
+causal effect, samples from trained models must be tested post hoc to ensure the desired constraints
+are present in the sampled data. A key benefit of frugal models is that the marginal causal effect is
+directly parameterised by the user through the likelihood. As a result, synthetic data samples will
+exactly satisfy these constraints."
+
+==========
+Questions: 
+==========
+
+?? - Is "Double Machine Learning" train on syntetic, test on real (TSTR)??
+
+?? - Is Frugal Flows jsut a way to paramaterize causal relationships in synthetic data or does it specifically address casaul preservation and causal measurment.
+
+?? - 
+
+
+==========
+REFERENCES:
+==========
+
+Ref - arXiv:2011.15007= "Realistic causal inference benchmarking."
+
+
+
+Questions for Dan:
+==================
+-- in order of importance...
