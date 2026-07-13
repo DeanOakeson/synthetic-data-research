@@ -4,6 +4,18 @@ Questions for Dan: ==================
     synthetic data sets WITHOUT A STRUCTURAL CAUSAL MODEL (SCM) and Frugal
     Flows paramaterizes the causal relations.
 
+    Global Utility can help detect the presence of the same SCM within
+    generated data but gives little to no data on the actual SCM at play.
+
+    Global utility treats every variable in turn as if it were the prediction
+    target, and see how well it can be recovered from all other variables.
+
+    Is Global Utility used to help identify underlying causal structures?
+
+    If we have the metric to give a score to the casuality preservation of a
+    dataset could we not train a model to detect and automatically embed that
+    SCM within the data?
+
     - How did he get into synthetic data generation.
     
     A few areas that I have been looking down:
@@ -19,13 +31,17 @@ Questions for Dan: ==================
         - I was considering using Frugal Flows and TabStruct to conduct some
           experiments on data blending. Would this be a valid prject outline?
 
-    - How is bias amplification mitigated within generated data?
+    - Are there good resources for Bias Amplification in Synthetic Data?
 
-    - Does the Generated data contain enough noise to accurately represent a
-      distribution?
+
+    - Data extrapolation for small sample sizes. Ask if there are some good
+      resources for that
+
+    - What are some advancments that he sees within healthcare directly related
+      to this research?
 
     - The more I have researched into Causality Measurments the more I feel
-      that it is above my current abilities without some advisor. I'd direct
+      that it is above my current abilities without an advisor. I'd need direct
       guidence for my thesis.
 
         - Could he help me?
@@ -39,13 +55,6 @@ Questions for Dan: ==================
 
         - Is there a related study that I can more easily jump into without
           much oversight?
-
-    - Data extrapolation for small sample sizes. Ask if there are some good
-      resources for that
-
-    - What are some advancments that he sees within healthcare directly related
-      to this research?
-
 
 
 ?? - 
