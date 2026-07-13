@@ -1,9 +1,13 @@
 Reading List
-------------
+============
 -- in order of importance...
 
-Read - arXiv:2411.01295 = "Marginal Causal Flows for Validation and Inference"
+arXiv:2411.01295 = "Marginal Causal Flows for Validation and Inference"
 - notes=./frugal-flows.txt
+
+------->
+
+arXiv.2509.11950 = "TabStruct: Measuring Structural Fidelity of Tabular Data"
 
 arXiv 2604.23904 = "Generative Synthetic Data for Causal Inference: Pitfalls, Remedies, and Opportunities"
 
@@ -12,3 +16,5 @@ arXiv 1608.04698 = "Evaluating Causal Models by Comparing Interventional Distrib
 prometislab.org  = "Unlocking the Potential of Synthetic Data: A Deep Dive into Causal Preservation"
 
 arXiv:2011.15007= "Realistic causal inference benchmarking."
+
+arXiv:1106.1813= SMOTE: Synthetic Minority Over-sampling Technique - 2011
