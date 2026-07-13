@@ -1,0 +1,51 @@
+Questions for Dan: ==================
+
+    TabStruct has "Global Utility" which gives a metric for causality within
+    synthetic data sets WITHOUT A STRUCTURAL CAUSAL MODEL (SCM) and Frugal
+    Flows paramaterizes the causal relations.
+
+    - How did he get into synthetic data generation.
+    
+    A few areas that I have been looking down:
+
+    - My professor wants to use synthetic data from drones, I would rather
+      address concerns within healthcare. What are some ways that I can get
+      involved with MHRA sandbox?
+
+    - Over interpretation - What are some risks that come up with over
+      interpretation?
+
+    - What proportion of data is appropriate for synthetic blending?
+        - I was considering using Frugal Flows and TabStruct to conduct some
+          experiments on data blending. Would this be a valid prject outline?
+
+    - How is bias amplification mitigated within generated data?
+
+    - Does the Generated data contain enough noise to accurately represent a
+      distribution?
+
+    - The more I have researched into Causality Measurments the more I feel
+      that it is above my current abilities without some advisor. I'd direct
+      guidence for my thesis.
+
+        - Could he help me?
+
+        - Would he want to work on project together?
+
+        - Does he need help on anything? 
+
+        - Is there a specific topic that he and his team wanted to get to but
+          dont have time for?
+
+        - Is there a related study that I can more easily jump into without
+          much oversight?
+
+    - Data extrapolation for small sample sizes. Ask if there are some good
+      resources for that
+
+    - What are some advancments that he sees within healthcare directly related
+      to this research?
+
+
+
+?? - 

@@ -1,0 +1,139 @@
+arXiv.2509.11950 = "TabStruct: Measuring Structural Fidelity of Tabular Data"
+-----------------------------------------------------------------------
+
+Notes:
+======
+
+|Term - "Tabular Data Generation"
+|------------------------------>
+    The process of creating artificial datasets that mimic statistcal
+    properties of real data while preserving privacy.
+
+|Term - "Structural Causal Model"
+|------------------------------>
+    Different from the "Rubin Causal Model". Focusses on a single mech that
+    generates data, allowing for direct modelling of cuasal relationships
+    through equations.
+
+    Instead of only a DAG to represent the model, equations are used alongside
+    it.
+ 
+
+|Term - "Global Utility"
+|------------------------------>
+    Metric proposed in TabStruct paper to evaulate the casual structural
+    integrity of the generated dataset.
+
+    Does not require a Structural Causal Model (SCM) to measure the
+    preservation of causality.
+
+         _______________________________________________
+        /_________________________________________________ /|
+        |"Treats each variable as a prediction target and | |
+        | measures how well it can be predicted using     | |
+        | other variables."                               | |
+        |_________________________________________________|/
+
+
+|Term - "Markov Property"
+|------------------------------>
+    The Markov Property is the memoryless property of a stochastic process,
+    which means that its future evolution is independent of its history. The
+    Markov assumption is used to describe a model where the markob property is
+    assumed to hole.
+
+|Term - "Stochastic Process"
+|------------------------------>
+    A mathematical object usually defined as a family of random variabnles in a
+    probability space, where the index of the family often has the
+    interpretation of time. i.e. growth of bacterial population, electrical
+    current fluctuating due to thermal noise, or the movement of a gas
+    molecule.
+
+|Term - "Ancestral Graph"
+|------------------------------>
+    A mixed graph used to provide a graphical representaion for the result of
+    marginalizing one or more verticies in a graphcial model that takes the
+    form of a DAG.
+        
+        - Contain 3 types of edges:
+            - Directed Edges   ( --> )
+            - BiDirected Edges ( <-> )
+            - UnDirected Edges ( --- )
+        - Has 3 Constraints:
+            - There are no directed cycles
+            - If there is an edge from a vertex u  to another vertex v , with
+              an arrowhead at v v} (that is, either a directed edge from u
+              {\displaystyle u} to v {\displaystyle v} or a bidirected edge),
+              then there does not exist a path from v {\displaystyle v} to u
+              {\displaystyle u} consisting of undirected edges and/or directed
+              edges oriented consistently with the path.
+            - If a vertex is an endpoint fo an undirected edge then it is not
+              also the endpoint of an edge with an arrowhead at v
+ 
+
+|Term - "Markov Equivilance Class"
+|------------------------------>
+    "Two ancestral graphs are Markov equivalent if they enocde the same set of
+    conditional independence relations. The independence relations in a n
+    ancestral graph are determined using m-seperation, a graphical criterion
+    that generalizeds d-seperation from DAGs to ancestral graphs"
+
+    
+
+
+=======
+Quotes:
+=======
+"Prior work (Hansen et al., 2023; Qian et al., 2024; Du & Li, 2024; Tu et al.,
+2024; Livieris et al., 2024; Kapar et al., 2025) has attempted to assess
+tabular data generators by evaluating the synthetic data they produce." (i)
+Insufficient tabular-specific fidelity assessments
+
+"Structural fidelity, as quantified by the proposed global utility, should be a
+core dimension when evaluating tabular generative models."
+
+"An extensive line of benchmarks (Stoian et al., 2025; Hansen et al., 2023;
+Qian et al., 2024; Du & Li, 2024; Kindji et al., 2024; Sidorenko et al., 2025;
+Long et al., 2025) has been proposed for tabular data generation,
+conventionally established around three dimensions: density estimation, privacy
+preservation, and ML efficacy."
+
+"Pearl's backdoor criterion is essentially a special-purpose, efficient search
+for one particular kind of d-separation statement (one that specifically
+isolates a causal effect from confounding). TabStruct's CglobalCglobal​ is
+the *brute-force superset* — it doesn't care about causal effects at all, only
+about fully specifying which independence statements the graph entails, so that
+those statements can later be tested against real or synthetic data. You could
+say Pearl's algorithm answers "*what do I need to condition on to get an
+unbiased effect estimate?*" while CglobalCglobal​ answers "what does this
+graph claim about independence, everywhere, exhaustively?" — the latter being
+far too expensive to compute for the sole purpose of adjustment-set selection,
+but exactly what's needed to check whether a synthetic dataset's joint
+distribution is faithful to the true causal graph.
+
+That's also why TabStruct restricts itself to the CPDAG level (Section D.2 in
+the paper) rather than requiring full DAG orientation — full backdoor-style
+reasoning needs directional information, but CI-statement matching at the CPDAG
+level only needs the skeleton + immoralities, which is more tractable and still
+meaningful for fidelity checking."
+
+==========
+Questions: 
+==========
+
+    ?? - Does Global Utility require a DAG?
+
+==========
+References:
+==========
+
+Src - https://github.com/SilenceX12138/TabStruct
+
+Ref - Mixed-type tabular data synthesis with score-based diffusion in latent
+space. In The Twelfth International Conference on Learning Representations,
+2023
+
+Ref- arXiv:1106.1813= SMOTE: Synthetic Minority Over-sampling Technique - 2011
+
+
